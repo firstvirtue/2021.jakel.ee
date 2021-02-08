@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-temp {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+}
+
+.container {
+  position: relative;
+}
+
+.page {
+  /* position: absolute;
+  left: 15px;
+  right: 15px; */
+}
+
+.page-enter {
+  position: absolute;
+  /* opacity: 0; */
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  /* transition: opacity 300ms, transform 300ms; */
+}
+
+.page-exit {
+  position: absolute;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10 - 1;
+}
+
+.page-exit-active {
+  /* opacity: 0; */
+  transform: scale(0.98);
+  /* transition: opacity 300ms, transform 300ms; */
+}
