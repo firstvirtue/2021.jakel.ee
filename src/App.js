@@ -22,26 +22,28 @@ function App() {
     console.log('transition: ', node.classList)
     if(node.classList.contains('page-enter')) {
       const stylepos = getPreviewStyleAndPosition()
-      console.log(stylepos)
-      gsap.fromTo(node, { 
-        top: stylepos.top,
-        left: stylepos.left,
-        width: stylepos.width,
-        height: stylepos.height,
-        borderRadius: stylepos.borderRadius,
-      }, {
+      // console.log(stylepos)
+      preview.style.opacity = 0;
+      gsap.fromTo(node, stylepos, {
         top: 0,
         left: 0,
         width: '100%',
         height: '',
         borderRadius: 0,
-        // ease: CustomEase.create('cubic', '0.8, -0.25, 0.33, 1.52'),
         ease: 'back.out(1.7)',
+        duration: 0.6,
       })
     } else if(node.classList.contains('page-exit')) {
-      gsap.fromTo(node, { opacity: 1 }, { opacity: 0, onComplete: () => {
-        routerEl.current.style.position = 'relative';
-      }})
+      const stylepos = getPreviewStyleAndPosition()
+      console.log(stylepos)
+      stylepos.ease = 'back.out(1.7)'
+      stylepos.onComplete = () => {
+        routerEl.current.style.position = 'relative'
+        preview.style.opacity = 1
+      }
+      stylepos.duration = 0.6
+      
+      gsap.to(node, stylepos)
     }
 
     window.scrollTo(0, 0)
@@ -94,6 +96,7 @@ function App() {
         </div>
       </div>
 
+      {/* <TransitionGroup style={{opacity: 0.5}}> */}
       <TransitionGroup>
       {routes.map(({ path, Component }) => (
         <Route key={path} exact path={path}>
@@ -101,11 +104,12 @@ function App() {
             
             <CSSTransition
               in={match != null}
-              timeout={300}
+              timeout={600}
               classNames="page"
               unmountOnExit
               onEnter = {node => {
                 console.log('Enter: ', node)
+                routerEl.current.style.top = -window.pageYOffset + 'px'
                 routerEl.current.style.position = 'fixed'
               }}
               onExit = {node => {
@@ -113,7 +117,7 @@ function App() {
               }}
               addEndListener={onAddEndHandler}
             >
-              <div>
+              <div className="page">
                 <Component />
               </div>
             </CSSTransition>
