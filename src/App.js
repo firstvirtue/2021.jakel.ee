@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Fujifilm2020 from './pages/fujifilm-2020'
 import KiaWorldwide2021 from './pages/kia-worldwide-2021'
 import Laneige2019 from './pages/laneige-2019'
+import Footer from './components/footer'
 import gsap from 'gsap'
 
 const routes = [
@@ -104,6 +105,8 @@ function App() {
             
           ))}
         </div>
+
+        <Footer />
       </div>
 
       {/* <TransitionGroup style={{opacity: 0.5}}> */}
