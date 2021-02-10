@@ -15,15 +15,17 @@ const routes = [
 
 function App() {
   let preview;
+  const DUR = 0.6
 
   const routerEl = useRef(null);
 
   const onAddEndHandler = (node, done) => {
-    console.log('transition: ', node.classList)
+    // console.log('transition: ', node.classList)
     if(node.classList.contains('page-enter')) {
       const stylepos = getPreviewStyleAndPosition()
-      // console.log(stylepos)
-      preview.style.opacity = 0;
+      console.log(stylepos)
+      window.scrollTo(0, 0)
+      preview.style.visibility = 'hidden';
       gsap.fromTo(node, stylepos, {
         top: 0,
         left: 0,
@@ -31,22 +33,30 @@ function App() {
         height: '',
         borderRadius: 0,
         ease: 'back.out(1.7)',
-        duration: 0.6,
+        duration: DUR,
+        onComplete: () => {
+          window.scrollTo(0, 0)
+        }
       })
     } else if(node.classList.contains('page-exit')) {
       const stylepos = getPreviewStyleAndPosition()
       console.log(stylepos)
       stylepos.ease = 'back.out(1.7)'
       stylepos.onComplete = () => {
+        const top = routerEl.current.style.top.replace('px', '').replace('-', '')
+        preview.style.visibility = 'visible'
+        
+        routerEl.current.style.top = ''
+
         routerEl.current.style.position = 'relative'
-        preview.style.opacity = 1
+        window.scrollTo(0, top)
       }
-      stylepos.duration = 0.6
+      stylepos.duration = DUR
       
       gsap.to(node, stylepos)
-    }
 
-    window.scrollTo(0, 0)
+      
+    }
   }
 
   const getPreviewStyleAndPosition = () => {
@@ -104,16 +114,18 @@ function App() {
             
             <CSSTransition
               in={match != null}
-              timeout={600}
+              timeout={DUR * 1000}
               classNames="page"
               unmountOnExit
               onEnter = {node => {
-                console.log('Enter: ', node)
+                // console.log('Enter: ', node)
                 routerEl.current.style.top = -window.pageYOffset + 'px'
                 routerEl.current.style.position = 'fixed'
               }}
               onExit = {node => {
-                console.log('Exit: ', node)
+                // console.log('Exit: ', node)
+                node.classList.add('page-scroll-block')
+                node.style.top = -window.pageYOffset + 'px'
               }}
               addEndListener={onAddEndHandler}
             >

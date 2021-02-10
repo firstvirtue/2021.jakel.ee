@@ -55,6 +55,13 @@
   position: relative;
 }
 
+.page-scroll-block {
+  position: fixed !important;
+  overflow: hidden !important;
+  max-height: 100vh !important;
+  pointer-events: none;
+}
+
 //////////////////////////////////////
 // preview
 
