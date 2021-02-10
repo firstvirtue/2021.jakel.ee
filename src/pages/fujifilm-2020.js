@@ -11,7 +11,7 @@ function Fujifilm2020() {
           <div className="img-wrap">
             <img src="/image/fujifilm-main-01.jpg" alt=""/>
           </div>
-          <h2 className="title">Fujifilm2020</h2>
+          <h2 className="title">후지필름</h2>
         </div>
         <div className="content">
           <p>
