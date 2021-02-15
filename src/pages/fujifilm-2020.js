@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './../components/footer'
 
 function Fujifilm2020() {
   return (
@@ -22,6 +23,7 @@ function Fujifilm2020() {
           <img src="/image/laneige-main-01.png" alt=""/>
         </div> */}
       </div>
+      <Footer />
     </>
   )
 }
