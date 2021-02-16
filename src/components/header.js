@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import * as palette from './../variables'
+import * as palette from '../variables'
 
 const Ci = styled.h1`
   margin-left: 5%;

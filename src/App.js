@@ -26,6 +26,7 @@ function App() {
     // console.log('transition: ', node.classList)
     if(node.classList.contains('page-enter')) {
       const stylepos = getPreviewStyleAndPosition()
+      if(!stylepos) return
       console.log(stylepos)
       window.scrollTo(0, 0)
       preview.style.visibility = 'hidden';
@@ -44,6 +45,7 @@ function App() {
     } else if(node.classList.contains('page-exit')) {
       const stylepos = getPreviewStyleAndPosition()
       console.log(stylepos)
+      if(!stylepos) return
       stylepos.ease = 'back.out(1.7)'
       stylepos.onComplete = () => {
         const top = routerEl.current.style.top.replace('px', '').replace('-', '')
@@ -63,6 +65,8 @@ function App() {
   }
 
   const getPreviewStyleAndPosition = () => {
+    if(!preview) return
+
     const { top, left, width, height } = preview.getBoundingClientRect();
 
     return {
