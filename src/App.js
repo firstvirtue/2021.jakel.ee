@@ -6,11 +6,12 @@ import Fujifilm2020 from './pages/fujifilm-2020'
 import KiaWorldwide2021 from './pages/kia-worldwide-2021'
 import Laneige2019 from './pages/laneige-2019'
 import Footer from './components/footer'
-import Intro from './components/intro'
+import Header from './components/header'
+import Cover from './components/cover'
 import gsap from 'gsap'
 
 const routes = [
-  { id: 'kia-worldwide-2021', path: '/kia-worldwide-2021', name: '기아 월드와이드', thumbnail: '/image/kia-worldwide-main-01.png', Component: KiaWorldwide2021 },
+  { id: 'kia-worldwide-2021', path: '/kia-worldwide-2021', name: '기아 브랜드 쇼케이스', thumbnail: '/image/kia-worldwide-main-01.png', Component: KiaWorldwide2021 },
   { id: 'fujifilm-2020', path: '/fujifilm-2020', name: '후지필름', thumbnail: '/image/fujifilm-main-01.jpg', Component: Fujifilm2020 },
   { id: 'laneige-2019', path: '/laneige-2019', name: '라네즈', thumbnail: '/image/laneige-main-01.png', Component: Laneige2019 },
 ]
@@ -74,27 +75,31 @@ function App() {
   }
 
   const history = useHistory()
-  const handleOnClick = useCallback((path, id) => {
+  const handleOnClick = useCallback((path, id, e) => {
     preview = document.querySelector(`.preview[data-id="${id}"]`)
     history && history.push(path)
+
+    e.preventDefault()
+    e.stopPropagation()
   }, [history])
 
   return (
     <>
       <div className="router" ref={routerEl}>
-        <Intro />
+        <Header />
 
         <div className="preview-nav">
           {routes.map(route => (
             
-            <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} >
+            <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} href={route.path}>
               <div className="preview" data-id={route.id}>
-                <div className="cover">
+                {/* <div className="cover">
                   <div className="img-wrap">
                     <img src={route.thumbnail} alt=""/>
                   </div>
                   <h2 className="title">{route.name}</h2>
-                </div>
+                </div> */}
+                <Cover imgSrc={route.thumbnail} title={route.name} />
               </div>
             </a>
             

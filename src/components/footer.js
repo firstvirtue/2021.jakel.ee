@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import * as palette from './../variables'
+import * as palette from '../variables'
 
 const FooterWrap = styled.div`
   width: 100%;
@@ -31,8 +31,8 @@ const UL = styled.ul`
 const LI = styled.li`
   display: inline-block;
   color: #686868;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
   font-size: 12px;
   width: 100%;
 
@@ -55,8 +55,8 @@ const LI = styled.li`
   }
 
   @media only screen and (min-width: 768px) {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
     width: 33.3333%;
   }
 `
@@ -96,10 +96,10 @@ function footer() {
             </LI>
             <LI className="item">
               <strong className="tit">Social</strong>
-              <Link className="link" href="#">Twitter</Link>
-              <Link className="link" href="#">Instagram</Link>
-              <Link className="link" href="#">Facebook</Link>
+              <Link className="link" href="https://github.com/firstvirtue" target="_blank" rel="noopener noreferrer">Github</Link>
               <Link className="link" href="#">LinkedIn</Link>
+              <Link className="link" href="https://instagram.com/sangolee" target="_blank" rel="noopener noreferrer">Instagram</Link>
+              <Link className="link" href="#">Facebook</Link>
             </LI>
             <LI>
               <strong className="tit">지금 구직중이에요 :D</strong>
