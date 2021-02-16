@@ -6,6 +6,7 @@ import Fujifilm2020 from './pages/fujifilm-2020'
 import KiaWorldwide2021 from './pages/kia-worldwide-2021'
 import Laneige2019 from './pages/laneige-2019'
 import Footer from './components/footer'
+import Intro from './components/intro'
 import gsap from 'gsap'
 
 const routes = [
@@ -81,13 +82,7 @@ function App() {
   return (
     <>
       <div className="router" ref={routerEl}>
-        <h1>Jake Lee</h1>
-        <figure>
-          <blockquote>
-            난 내 예술로 사람들을 어루만지고 싶다. 그들이 이렇게 말하길 바란다. 그는 마음이 깊은 사람이구나, 마음이 따뜻한 사람이구나.
-            <figcaption>— 빈센트 반 고흐, <cite>러빙 빈센트</cite></figcaption>
-          </blockquote>
-        </figure>
+        <Intro />
 
         <div className="preview-nav">
           {routes.map(route => (

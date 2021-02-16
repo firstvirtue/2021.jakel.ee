@@ -1,11 +1,13 @@
 import React from 'react'
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
+import * as palette from './../variables'
 
 const FooterWrap = styled.div`
   width: 100%;
   background: #ffffff;
   padding-left: 5%;
   padding-right: 5%;
+  font-family: ${palette.FONT_EN};
   box-sizing: border-box;
 
   @media only screen and (min-width: 768px) {
@@ -26,7 +28,7 @@ const UL = styled.ul`
   padding-bottom: 2rem;
 `
 
-const StyledLi = styled.li`
+const LI = styled.li`
   display: inline-block;
   color: #686868;
   margin-top: 1rem;
@@ -80,29 +82,29 @@ function footer() {
       <FooterWrap>
         <Footer className="footer">
           <UL className="footer-items">
-            <StyledLi className="item head">
+            <LI className="item head">
               <strong className="tit">이상오 Jake</strong>
               <p>Front-end Developer</p>
-            </StyledLi>
-            <StyledLi className="item">
+            </LI>
+            <LI className="item">
               <strong className="tit">Email</strong>
               <Link className="link" href="mailto:firstvirtue@gmail.com">firstvirtue@gmail.com</Link>
-            </StyledLi>
-            <StyledLi className="item">
+            </LI>
+            <LI className="item">
               <strong className="tit">Phone</strong>
               <Link className="link" href="tel:+82 10.5260.0729">+82 10.5260.0729</Link>
-            </StyledLi>
-            <StyledLi className="item">
+            </LI>
+            <LI className="item">
               <strong className="tit">Social</strong>
               <Link className="link" href="#">Twitter</Link>
               <Link className="link" href="#">Instagram</Link>
               <Link className="link" href="#">Facebook</Link>
               <Link className="link" href="#">LinkedIn</Link>
-            </StyledLi>
-            <StyledLi>
+            </LI>
+            <LI>
               <strong className="tit">지금 구직중이에요 :D</strong>
               <Link href="#">이력서</Link>
-            </StyledLi>
+            </LI>
           </UL>
         </Footer>
       </FooterWrap>
