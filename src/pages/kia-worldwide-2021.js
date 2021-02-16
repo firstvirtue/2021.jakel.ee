@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './../components/footer'
 
 function KiaWorldwide2021() {
   return (
@@ -10,6 +11,7 @@ function KiaWorldwide2021() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
