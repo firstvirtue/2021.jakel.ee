@@ -1,8 +1,16 @@
 import styled, { css } from 'styled-components'
 import * as palette from '../variables'
 
+const Header = styled.div`
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  max-width: ${palette.MAX_L}
+  margin: 0 auto;
+`
+
 const Ci = styled.h1`
-  margin-top: 4rem;
+  // margin-top: 4rem;
+  margin: 0;
   margin-left: 5%;
   font-size: 20px;
   font-family: ${palette.FONT_EN}
@@ -19,7 +27,7 @@ const Figure = styled.figure`
 `
 
 const Blockquote = styled.blockquote`
-  margin-top: 10rem;
+  margin-top: 7rem;
   color: #686868;
   font-weight: bold;
   text-align: center;
@@ -29,7 +37,9 @@ const Blockquote = styled.blockquote`
 function Intro() {
   return (
     <>
-      <Ci className="ci">Jake Lee</Ci>
+      <Header>
+        <Ci className="ci">Jake Lee</Ci>
+      </Header>
       <Figure>
         <Blockquote>
           난 내 예술로 사람들을 어루만지고 싶다.<br /> 

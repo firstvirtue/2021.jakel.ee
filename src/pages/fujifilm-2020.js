@@ -6,7 +6,7 @@ function Fujifilm2020() {
   return (
     <>
       <div className="post">
-        <Cover title="후지필름" imgSrc="/image/fujifilm-main-01.jpg" />
+        <Cover title="후지필름" imgSrc="/image/fujifilm/cover-lg.jpg" />
         <div className="content">
           <img src="/image/fujifilm-main-01.jpg" alt=""/>
           <p>

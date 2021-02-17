@@ -10,11 +10,17 @@ const Wrap = styled.div`
 
 const Slogan = styled.div`
   padding: 0 10px;
-  font-size: 36px;
+  margin-bottom: 8rem;
+  font-size: 38px;
   font-family: ${palette.FONT_EN};
   font-weight: bold;
   color: #1e1e1e;
   text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 8rem;
+    font-size: 64px;
+  }
 `
 
 const Container = styled.div`
@@ -54,7 +60,7 @@ const Desc = styled.div`
   @media only screen and (min-width: 768px) {
     min-width: 500px;
     max-width: 600px;
-    margin-left: 4rem;
+    margin-left: 6rem;
   }
 `
 

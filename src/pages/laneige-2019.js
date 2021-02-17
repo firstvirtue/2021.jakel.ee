@@ -6,7 +6,7 @@ function Laneige2019() {
       <div className="post">
         <div className="cover">
           <div className="img-wrap">
-            <img src="/image/laneige-main-01.png" alt=""/>
+            <img src="/image/laneige/cover-lg.png" alt=""/>
           </div>
         </div>
       </div>

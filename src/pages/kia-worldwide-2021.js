@@ -20,7 +20,7 @@ function KiaWorldwide2021() {
           <h1 className="title">기아 브랜드 쇼케이스</h1>
         </div> */}
 
-        <Cover title="기아 브랜드 쇼케이스" imgSrc="/image/kia-worldwide-main-01.png" />
+        <Cover title="기아 브랜드 쇼케이스" imgSrc="/image/kia-worldwide/cover-lg.jpg" />
 
         <Intro slogan="Movement that inspires" specs={specs}>
           <h3>브랜드 리런칭</h3>

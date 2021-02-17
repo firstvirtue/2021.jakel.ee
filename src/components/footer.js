@@ -18,6 +18,7 @@ const FooterWrap = styled.div`
 const Footer = styled.div`
   max-width: 700px;
   margin: 0 auto;
+  padding-bottom: 2rem;
   border-top: 1px solid #dcdbd9;
 `
 
@@ -72,7 +73,11 @@ const Link = styled.a`
   & + & {
     margin-left: 10px;
   }
+`
 
+const Copyright = styled.div`
+  font-size: 12px;
+  color: #686868;
 `
 
 function footer() {
@@ -106,6 +111,7 @@ function footer() {
               <Link href="#">이력서</Link>
             </LI>
           </UL>
+          {/* <Copyright>2021</Copyright> */}
         </Footer>
       </FooterWrap>
     </>

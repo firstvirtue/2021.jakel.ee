@@ -11,9 +11,9 @@ import Cover from './components/cover'
 import gsap from 'gsap'
 
 const routes = [
-  { id: 'kia-worldwide-2021', path: '/kia-worldwide-2021', name: '기아 브랜드 쇼케이스', thumbnail: '/image/kia-worldwide-main-01.png', Component: KiaWorldwide2021 },
-  { id: 'fujifilm-2020', path: '/fujifilm-2020', name: '후지필름', thumbnail: '/image/fujifilm-main-01.jpg', Component: Fujifilm2020 },
-  { id: 'laneige-2019', path: '/laneige-2019', name: '라네즈', thumbnail: '/image/laneige-main-01.png', Component: Laneige2019 },
+  { id: 'kia-worldwide-2021', path: '/kia-worldwide-2021', name: '기아 브랜드 쇼케이스', thumbnail: '/image/kia-worldwide/cover-lg.jpg', Component: KiaWorldwide2021 },
+  { id: 'fujifilm-2020', path: '/fujifilm-2020', name: '후지필름', thumbnail: '/image/fujifilm/cover-lg.jpg', Component: Fujifilm2020 },
+  { id: 'laneige-2019', path: '/laneige-2019', name: '라네즈', thumbnail: '/image/laneige/cover-lg.png', Component: Laneige2019 },
 ]
 
 function App() {
