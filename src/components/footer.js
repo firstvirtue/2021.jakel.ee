@@ -18,7 +18,7 @@ const FooterWrap = styled.div`
 const Footer = styled.div`
   max-width: 700px;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  // padding-bottom: 4rem;
   border-top: 1px solid #dcdbd9;
 `
 

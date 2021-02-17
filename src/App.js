@@ -17,57 +17,80 @@ const routes = [
 ]
 
 function App() {
-  let preview;
+  // let preview;
   const DUR = 0.6
 
   const routerEl = useRef(null);
 
   const onAddEndHandler = (node, done) => {
-    // console.log('transition: ', node.classList)
-    if(node.classList.contains('page-enter')) {
-      const stylepos = getPreviewStyleAndPosition()
-      if(!stylepos) return
-      console.log(stylepos)
-      window.scrollTo(0, 0)
-      preview.style.visibility = 'hidden';
-      gsap.fromTo(node, stylepos, {
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '',
-        borderRadius: 0,
-        ease: 'back.out(1.7)',
-        duration: DUR,
-        onComplete: () => {
-          window.scrollTo(0, 0)
-        }
-      })
-    } else if(node.classList.contains('page-exit')) {
-      const stylepos = getPreviewStyleAndPosition()
-      console.log(stylepos)
-      if(!stylepos) return
-      stylepos.ease = 'back.out(1.7)'
-      stylepos.onComplete = () => {
-        const top = routerEl.current.style.top.replace('px', '').replace('-', '')
-        preview.style.visibility = 'visible'
+    if(window.view === 1) {
+      if(node.classList.contains('page-enter')) {
+        const stylepos = getPreviewStyleAndPosition()
+        if(!stylepos) return
+        console.log('enter: ', stylepos)
+        window.scrollTo(0, 0)
+        window.preview.style.visibility = 'hidden';
+        gsap.fromTo(node, stylepos, {
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '',
+          borderRadius: 0,
+          ease: 'back.out(1.7)',
+          duration: DUR,
+          onComplete: () => {
+            window.scrollTo(0, 0)
+            window.view = 0
+          }
+        })
+      } else if(node.classList.contains('page-exit')) {
         
-        routerEl.current.style.top = ''
-
-        routerEl.current.style.position = 'relative'
-        window.scrollTo(0, top)
       }
-      stylepos.duration = DUR
-      
-      gsap.to(node, stylepos)
+    } else {
+      // console.log('transition: ', node.classList)
+      if(node.classList.contains('page-enter')) {
+        const stylepos = getPreviewStyleAndPosition()
+        if(!stylepos) return
+        console.log('enter: ', stylepos)
+        window.scrollTo(0, 0)
+        window.preview.style.visibility = 'hidden';
+        gsap.fromTo(node, stylepos, {
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '',
+          borderRadius: 0,
+          ease: 'back.out(1.7)',
+          duration: DUR,
+          onComplete: () => {
+            window.scrollTo(0, 0)
+          }
+        })
+      } else if(node.classList.contains('page-exit')) {
+        const stylepos = getPreviewStyleAndPosition()
+        console.log('exit: ', stylepos)
+        if(!stylepos) return
+        stylepos.ease = 'back.out(1.7)'
+        stylepos.onComplete = () => {
+          const top = routerEl.current.style.top.replace('px', '').replace('-', '')
+          window.preview.style.visibility = 'visible'
+          
+          routerEl.current.style.top = ''
 
-      
+          routerEl.current.style.position = 'relative'
+          window.scrollTo(0, top)
+        }
+        stylepos.duration = DUR
+        
+        gsap.to(node, stylepos)
+      }
     }
   }
 
   const getPreviewStyleAndPosition = () => {
-    if(!preview) return
+    if(!window.preview) return
 
-    const { top, left, width, height } = preview.getBoundingClientRect();
+    const { top, left, width, height } = window.preview.getBoundingClientRect();
 
     return {
       top,
@@ -80,7 +103,7 @@ function App() {
 
   const history = useHistory()
   const handleOnClick = useCallback((path, id, e) => {
-    preview = document.querySelector(`.preview[data-id="${id}"]`)
+    window.preview = document.querySelector(`.preview[data-id="${id}"]`)
     history && history.push(path)
 
     e.preventDefault()
