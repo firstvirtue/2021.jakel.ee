@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import * as palette from '../variables'
 
 const Ci = styled.h1`
+  margin-top: 4rem;
   margin-left: 5%;
   font-size: 20px;
   font-family: ${palette.FONT_EN}
@@ -18,7 +19,11 @@ const Figure = styled.figure`
 `
 
 const Blockquote = styled.blockquote`
+  margin-top: 10rem;
   color: #686868;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.7;
 `
 
 function Intro() {

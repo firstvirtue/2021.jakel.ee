@@ -34,7 +34,7 @@ const Spec = styled.li`
   font-family: ${palette.FONT_EN};
 
   @media only screen and (min-width: 768px) {
-    max-width: 400px;
+    max-width: 240px;
   }
 
   .tit {
