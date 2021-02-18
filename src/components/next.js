@@ -8,11 +8,21 @@ function Next(props) {
   const history = useHistory()
   const handleOnClick = useCallback((e) => {
 
+    // 목록에서 라우팅 되는 것과 구분짓기 위한 변수
     window.view = 1
-    // [FIXME] data-id를 이용해 같지만 다른 형태로 구현할 것. 지금은 window.preview에 목록의 아이템이 들어간다.
+
+    // 목록 갱신.
+    // [TODO] 현재 페이지 아이템에 대한 스크롤 위치 갱신
+    const beforeId = window.preview.getAttribute('data-id');
+    const before = document.querySelector(`.preview-nav .preview[data-id="${beforeId}"]`)
+    before.style.visibility = 'visible'
+    const preview = document.querySelector(`.preview-nav .preview[data-id="${props.pageId}"]`)
+    preview.style.visibility = 'hidden'
+    
+    // preview 업데이트
     window.preview = document.querySelector(`.next-preview[data-id="${props.pageId}"]`)
 
-    console.log(window.preview)
+    // 트랜지션을 위한 post 고정, 목록을 고정한 것과 같은 목적
     const post = document.querySelector('.post')
     post.style.top = -window.pageYOffset + 'px'
     post.style.position = 'fixed'
