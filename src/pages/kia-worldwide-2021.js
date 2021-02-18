@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
 import Footer from './../components/footer'
 import Intro from './../components/intro'
 import Cover from './../components/cover'
+import Next from './../components/next'
 
 function KiaWorldwide2021() {
   const specs = [
@@ -11,21 +12,6 @@ function KiaWorldwide2021() {
     { tit: '언어', cont: 'Ko En' },
     { tit: '프로젝트 보기', cont: 'https://worldwide.kia.com' },
   ]
-
-  const history = useHistory()
-  const handleOnClick = useCallback((e) => {
-
-    window.view = 1
-    // [FIXME] data-id를 이용해 같지만 다른 형태로 구현할 것. 지금은 window.preview에 목록의 아이템이 들어간다.
-    window.preview = document.querySelector(`.preview[data-id="fujifilm-2020"]`)
-    const post = document.querySelector('.post')
-    post.style.top = -window.pageYOffset + 'px'
-    post.style.position = 'fixed'
-
-    history.replace('/fujifilm-2020')
-    e.preventDefault()
-    e.stopPropagation()
-  });
 
   return (
     <>
@@ -51,9 +37,9 @@ function KiaWorldwide2021() {
 
         <Footer />
 
-        <div className="preview" data-id="fujifilm-2020" onClick={handleOnClick.bind(this)}>
+        <Next pageId="fujifilm-2020">
           <Cover imgSrc="/image/fujifilm/cover-lg.jpg" title="후지필름" />
-        </div>
+        </Next>
       </div>
     </>
   )

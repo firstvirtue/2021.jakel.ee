@@ -67,8 +67,14 @@ function App() {
           }
         })
       } else if(node.classList.contains('page-exit')) {
+        console.log('exit: ', window.preview)
+
+        if(window.preview.classList.contains('next-preview')) {
+          const id = window.preview.getAttribute('data-id')
+          window.preview = routerEl.current.querySelector(`.preview[data-id="${id}"]`)
+        }
+        
         const stylepos = getPreviewStyleAndPosition()
-        console.log('exit: ', stylepos)
         if(!stylepos) return
         stylepos.ease = 'back.out(1.7)'
         stylepos.onComplete = () => {
@@ -89,9 +95,9 @@ function App() {
 
   const getPreviewStyleAndPosition = () => {
     if(!window.preview) return
-
+    
     const { top, left, width, height } = window.preview.getBoundingClientRect();
-
+    
     return {
       top,
       left,
@@ -120,12 +126,6 @@ function App() {
             
             <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} href={route.path}>
               <div className="preview" data-id={route.id}>
-                {/* <div className="cover">
-                  <div className="img-wrap">
-                    <img src={route.thumbnail} alt=""/>
-                  </div>
-                  <h2 className="title">{route.name}</h2>
-                </div> */}
                 <Cover imgSrc={route.thumbnail} title={route.name} />
               </div>
             </a>
@@ -149,8 +149,10 @@ function App() {
               unmountOnExit
               onEnter = {node => {
                 // console.log('Enter: ', node)
-                routerEl.current.style.top = -window.pageYOffset + 'px'
-                routerEl.current.style.position = 'fixed'
+                if(routerEl.current.style.position !== 'fixed') {
+                  routerEl.current.style.top = -window.pageYOffset + 'px'
+                  routerEl.current.style.position = 'fixed'
+                }
               }}
               onExit = {node => {
                 // console.log('Exit: ', node)
