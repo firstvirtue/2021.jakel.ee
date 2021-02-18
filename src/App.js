@@ -8,6 +8,7 @@ import Laneige2019 from './pages/laneige-2019'
 import Footer from './components/footer'
 import Header from './components/header'
 import Cover from './components/cover'
+import PostCloser from './components/post-closer'
 import gsap from 'gsap'
 
 const routes = [
@@ -27,7 +28,7 @@ function App() {
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
         if(!stylepos) return
-        console.log('enter: ', stylepos)
+        // console.log('enter: ', stylepos)
         window.scrollTo(0, 0)
         window.preview.style.visibility = 'hidden';
         gsap.fromTo(node, stylepos, {
@@ -51,7 +52,7 @@ function App() {
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
         if(!stylepos) return
-        console.log('enter: ', stylepos)
+        // console.log('enter: ', stylepos)
         window.scrollTo(0, 0)
         window.preview.style.visibility = 'hidden';
         gsap.fromTo(node, stylepos, {
@@ -67,7 +68,7 @@ function App() {
           }
         })
       } else if(node.classList.contains('page-exit')) {
-        console.log('exit: ', window.preview)
+        // console.log('exit: ', window.preview)
 
         if(window.preview.classList.contains('next-preview')) {
           const id = window.preview.getAttribute('data-id')
@@ -162,6 +163,7 @@ function App() {
               addEndListener={onAddEndHandler}
             >
               <div className="page">
+                <PostCloser />
                 <Component />
               </div>
             </CSSTransition>

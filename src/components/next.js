@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import * as palette from '../variables'
 
+const NextWrap = styled.div`
+  cursor: pointer;
+`
+
 function Next(props) {
 
   const history = useHistory()
@@ -35,9 +39,9 @@ function Next(props) {
 
   return(
     <>
-      <div className="preview next-preview" data-id={props.pageId} onClick={handleOnClick.bind(this)}>
+      <NextWrap className="preview next-preview" data-id={props.pageId} onClick={handleOnClick.bind(this)}>
         {props.children}
-      </div>
+      </NextWrap>
     </>
   )
 }
