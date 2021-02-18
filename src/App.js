@@ -37,7 +37,7 @@ function App() {
           width: '100%',
           height: '',
           borderRadius: 0,
-          ease: 'back.out(1.7)',
+          ease: 'back.out(1.0)',
           duration: DUR,
           onComplete: () => {
             window.scrollTo(0, 0)
@@ -61,7 +61,7 @@ function App() {
           width: '100%',
           height: '',
           borderRadius: 0,
-          ease: 'back.out(1.7)',
+          ease: 'back.out(1.0)',
           duration: DUR,
           onComplete: () => {
             window.scrollTo(0, 0)
@@ -77,7 +77,7 @@ function App() {
         
         const stylepos = getPreviewStyleAndPosition()
         if(!stylepos) return
-        stylepos.ease = 'back.out(1.7)'
+        stylepos.ease = 'back.out(1.0)'
         stylepos.onComplete = () => {
           const top = routerEl.current.style.top.replace('px', '').replace('-', '')
           window.preview.style.visibility = 'visible'

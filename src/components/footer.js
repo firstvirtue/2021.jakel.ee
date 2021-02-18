@@ -18,7 +18,7 @@ const FooterWrap = styled.div`
 const Footer = styled.div`
   max-width: 700px;
   margin: 0 auto;
-  // padding-bottom: 4rem;
+  padding-bottom: 4rem;
   border-top: 1px solid #dcdbd9;
 `
 
@@ -34,7 +34,7 @@ const LI = styled.li`
   color: #686868;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
 
   &.head {
@@ -76,8 +76,9 @@ const Link = styled.a`
 `
 
 const Copyright = styled.div`
-  font-size: 12px;
+  font-size: 11px;
   color: #686868;
+  text-align: center;
 `
 
 function footer() {
@@ -111,7 +112,7 @@ function footer() {
               <Link href="#">이력서</Link>
             </LI>
           </UL>
-          {/* <Copyright>2021</Copyright> */}
+          <Copyright>© 2021. JAKE LEE 모든 권리 보유.</Copyright>
         </Footer>
       </FooterWrap>
     </>

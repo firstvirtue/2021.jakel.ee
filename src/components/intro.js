@@ -46,21 +46,26 @@ const Spec = styled.li`
   .tit {
     display: block;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 15px;
     color: #1e1e1e;
   }
 
   .cont {
-    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    font-size: 15px;
     color: #686868;
   }
 `
 
 const Desc = styled.div`
+  // font-size: 16px;
+
   @media only screen and (min-width: 768px) {
     min-width: 500px;
     max-width: 600px;
     margin-left: 6rem;
+    font-size: 18px;
   }
 `
 

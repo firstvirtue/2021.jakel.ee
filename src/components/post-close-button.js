@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom'
 
 const Alink = styled.a`
   position: fixed;
-  top: 40px;
-  right: 40px;
+  top: 8%;
+  right: 5%;
   z-index: 10;
 `
 
