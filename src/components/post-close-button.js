@@ -8,7 +8,7 @@ const Alink = styled.a`
   z-index: 10;
 `
 
-function PostCloser() {
+function PostCloseButton() {
 
   const history = useHistory()
   const handleOnClick = (e) => {
@@ -28,4 +28,4 @@ function PostCloser() {
   )
 }
 
-export default PostCloser
+export default PostCloseButton

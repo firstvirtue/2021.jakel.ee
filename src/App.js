@@ -8,7 +8,7 @@ import Laneige2019 from './pages/laneige-2019'
 import Footer from './components/footer'
 import Header from './components/header'
 import Cover from './components/cover'
-import PostCloser from './components/post-closer'
+import PostCloseButton from './components/post-close-button'
 import gsap from 'gsap'
 
 const routes = [
@@ -163,7 +163,7 @@ function App() {
               addEndListener={onAddEndHandler}
             >
               <div className="page">
-                <PostCloser />
+                <PostCloseButton />
                 <Component />
               </div>
             </CSSTransition>
