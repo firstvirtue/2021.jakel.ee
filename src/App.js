@@ -27,23 +27,29 @@ function App() {
     if(window.view === 1) {
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
-        if(!stylepos) return
+        if(!stylepos) return done()
         // console.log('enter: ', stylepos)
-        window.scrollTo(0, 0)
-        window.preview.style.visibility = 'hidden';
-        gsap.fromTo(node, stylepos, {
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '',
-          borderRadius: 0,
-          ease: 'back.out(1.0)',
-          duration: DUR,
-          onComplete: () => {
-            window.scrollTo(0, 0)
-            window.view = 0
-          }
-        })
+        
+        node.style.visibility = 'hidden';
+        const coverResource = new Image()
+        coverResource.src = node.querySelector('.cover img').getAttribute('src')
+        coverResource.onload = () => {
+          node.style.visibility = 'visible';
+          window.preview.style.visibility = 'hidden';
+          gsap.fromTo(node, stylepos, {
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '',
+            borderRadius: 0,
+            ease: 'back.out(1.0)',
+            duration: DUR,
+            onComplete: () => {
+              window.scrollTo(0, 0)
+              window.view = 0
+            }
+          })
+        }
       } else if(node.classList.contains('page-exit')) {
         
       }
@@ -51,22 +57,30 @@ function App() {
       // console.log('transition: ', node.classList)
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
-        if(!stylepos) return
-        // console.log('enter: ', stylepos)
-        window.scrollTo(0, 0)
-        window.preview.style.visibility = 'hidden';
-        gsap.fromTo(node, stylepos, {
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '',
-          borderRadius: 0,
-          ease: 'back.out(1.0)',
-          duration: DUR,
-          onComplete: () => {
-            window.scrollTo(0, 0)
-          }
-        })
+        if(!stylepos) return done()
+
+        node.style.visibility = 'hidden';
+        const coverResource = new Image()
+        coverResource.src = node.querySelector('.cover img').getAttribute('src')
+        coverResource.onload = () => {
+          // window.scrollTo(0, 0)
+          node.style.visibility = 'visible';
+          window.preview.style.visibility = 'hidden';
+          gsap.fromTo(node, stylepos, {
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '',
+            borderRadius: 0,
+            ease: 'back.out(1.0)',
+            duration: DUR,
+            onComplete: () => {
+              window.scrollTo(0, 0)
+            },
+            // delay: 0.1,
+          })
+        }
+        
       } else if(node.classList.contains('page-exit')) {
         // console.log('exit: ', window.preview)
 

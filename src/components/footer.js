@@ -108,11 +108,11 @@ function footer() {
               <Link className="link" href="#">Facebook</Link>
             </LI>
             <LI>
-              <strong className="tit">지금 구직중이에요 :D</strong>
+              <strong className="tit">지금 구직중이에요 <span>:D</span></strong>
               <Link href="#">이력서</Link>
             </LI>
           </UL>
-          <Copyright>© 2021. JAKE LEE 모든 권리 보유.</Copyright>
+          <Copyright>© 2021. Jake Lee.</Copyright>
         </Footer>
       </FooterWrap>
     </>
