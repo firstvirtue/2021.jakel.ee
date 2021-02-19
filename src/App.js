@@ -2,20 +2,12 @@ import './App.scss'
 import { useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import Fujifilm2020 from './pages/fujifilm-2020'
-import KiaWorldwide2021 from './pages/kia-worldwide-2021'
-import Laneige2019 from './pages/laneige-2019'
 import Footer from './components/footer'
 import Header from './components/header'
 import Cover from './components/cover'
 import PostCloseButton from './components/post-close-button'
 import gsap from 'gsap'
-
-const routes = [
-  { id: 'kia-worldwide-2021', path: '/kia-worldwide-2021', name: '기아 브랜드 쇼케이스', thumbnail: '/image/kia-worldwide/cover-lg.jpg', Component: KiaWorldwide2021 },
-  { id: 'fujifilm-2020', path: '/fujifilm-2020', name: '후지필름', thumbnail: '/image/fujifilm/cover-lg.jpg', Component: Fujifilm2020 },
-  { id: 'laneige-2019', path: '/laneige-2019', name: '라네즈', thumbnail: '/image/laneige/cover-lg.png', Component: Laneige2019 },
-]
+import routes from './routes'
 
 function App() {
   // let preview;
@@ -136,16 +128,26 @@ function App() {
       <div className="router" ref={routerEl}>
         <Header />
 
-        <div className="preview-nav">
-          {routes.map(route => (
-            
-            <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} href={route.path}>
-              <div className="preview" data-id={route.id}>
-                <Cover imgSrc={route.thumbnail} title={route.name} />
-              </div>
-            </a>
-            
-          ))}
+        {/* <h2 className="title">모든 프로젝트</h2> */}
+        <div className="preview-container">
+          <div className="preview-nav">
+            {routes.map(route => (
+              
+              <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} href={route.path}>
+                <div className="preview-wrap">
+                  <div className="preview" data-id={route.id}>
+                    <Cover imgSrc={route.thumbnail} title={route.name} />
+                  </div>
+                  <div className="preview-cont">
+                    <strong className="publish">{route.publish}</strong>
+                    <span className="tit">{route.title}</span>
+                    <p className="desc">{route.desc}</p>
+                  </div>
+                </div>
+              </a>
+              
+            ))}
+          </div>
         </div>
 
         <Footer />

@@ -23,7 +23,7 @@ function KiaWorldwide2021() {
           <h1 className="title">기아 브랜드 쇼케이스</h1>
         </div> */}
 
-        <Cover title="기아 브랜드 쇼케이스" imgSrc="/image/kia-worldwide/cover-lg.jpg" />
+        <Cover title="기아 KIA" imgSrc="/image/kia-worldwide/cover-lg.jpg" />
 
         <Intro slogan="Movement that inspires" specs={specs}>
           <h3>브랜드 리런칭</h3>
@@ -33,7 +33,9 @@ function KiaWorldwide2021() {
           </p>
         </Intro>
 
-        <img src="/image/kia-worldwide-main-01.png" alt=""/>
+        {/* <img src="/image/kia-worldwide-main-01.png" alt=""/> */}
+
+        <video src="/image/kia-worldwide/count.mp4" autoPlay muted loop playsInline></video>
 
         <Footer />
 
