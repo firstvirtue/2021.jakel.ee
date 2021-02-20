@@ -112,7 +112,7 @@ function footer() {
               <Link href="#">이력서</Link>
             </LI>
           </UL>
-          <Copyright>© 2021. Jake Lee.</Copyright>
+          {/* <Copyright>© 2021. Jake Lee.</Copyright> */}
         </Footer>
       </FooterWrap>
     </>

@@ -32,13 +32,9 @@ function KiaWorldwide2021() {
           <video src="/image/kia-worldwide/count.mp4" autoPlay muted loop playsInline></video>
         </figure>
         
-
-        <p>
-        많은 문제가 있었으나..
-        </p>
+        
         
         <Footer />
-        
 
         <Next pageId="fujifilm-2020">
           <Cover imgSrc="/image/fujifilm/cover-lg.jpg" title="후지필름" />

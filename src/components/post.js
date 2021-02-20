@@ -8,19 +8,23 @@ const PostWrap = styled.div`
   background-color: white;
 
   article {
-    margin: 0 auto;
-    max-width: ${palette.MAX_POST};
+    // margin: 0 auto;
+    // max-width: ${palette.MAX_POST};
 
     @media only screen and (min-width: ${palette.MAX_POST}) {
       & > .cover,
       .summary {
-        margin-left: calc((-100vw + ${palette.MAX_POST}) / 2);
-        margin-right: calc((-100vw + ${palette.MAX_POST}) / 2);
+        // margin-left: calc((-100vw + ${palette.MAX_POST}) / 2);
+        // margin-right: calc((-100vw + ${palette.MAX_POST}) / 2);
       }
 
       .next-preview {
-        margin-left: calc((-100vw + ${palette.MAX_POST} + 200px) / 2);
-        margin-right: calc((-100vw + ${palette.MAX_POST} + 200px) / 2);
+        // margin-left: calc((-100vw + ${palette.MAX_POST} + 200px) / 2);
+        // margin-right: calc((-100vw + ${palette.MAX_POST} + 200px) / 2);
+
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 100px;
       }
 
       *[data-size="lg"] {
@@ -42,7 +46,7 @@ const PostWrap = styled.div`
 
   .footer {
     margin-top: 6rem;
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
 `
 

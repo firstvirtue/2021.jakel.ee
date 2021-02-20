@@ -12,6 +12,7 @@ import routes from './routes'
 function App() {
   // let preview;
   const DUR = 0.6
+  const EASE = 'back.out(0.5)'
 
   const routerEl = useRef(null);
 
@@ -34,7 +35,7 @@ function App() {
             width: '100%',
             height: '',
             borderRadius: 0,
-            ease: 'back.out(1.0)',
+            ease: EASE,
             duration: DUR,
             onComplete: () => {
               window.scrollTo(0, 0)
@@ -64,7 +65,7 @@ function App() {
             width: '100%',
             height: '',
             borderRadius: 0,
-            ease: 'back.out(1.0)',
+            ease: EASE,
             duration: DUR,
             onComplete: () => {
               window.scrollTo(0, 0)
@@ -83,7 +84,7 @@ function App() {
         
         const stylepos = getPreviewStyleAndPosition()
         if(!stylepos) return
-        stylepos.ease = 'back.out(1.0)'
+        stylepos.ease = EASE
         stylepos.onComplete = () => {
           const top = routerEl.current.style.top.replace('px', '').replace('-', '')
           window.preview.style.visibility = 'visible'
