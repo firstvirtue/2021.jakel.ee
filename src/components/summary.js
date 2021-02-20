@@ -69,10 +69,10 @@ const Desc = styled.div`
   }
 `
 
-function Intro(props) {
+function Summary(props) {
   return(
     <>
-      <Wrap>
+      <Wrap className="summary">
       {props.slogan && (
         <Slogan>
           {props.slogan}
@@ -100,4 +100,4 @@ function Intro(props) {
   )
 }
 
-export default Intro
+export default Summary

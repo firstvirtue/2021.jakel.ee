@@ -76,7 +76,7 @@ function App() {
       } else if(node.classList.contains('page-exit')) {
         // console.log('exit: ', window.preview)
 
-        if(window.preview.classList.contains('next-preview')) {
+        if(window.preview && window.preview.classList.contains('next-preview')) {
           const id = window.preview.getAttribute('data-id')
           window.preview = routerEl.current.querySelector(`.preview[data-id="${id}"]`)
         }

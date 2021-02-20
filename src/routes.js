@@ -20,17 +20,17 @@ export default [
     title: '후지필름',
     thumbnail: '/image/fujifilm/cover-lg.jpg',
     publish: '프로젝트',
-    desc: '캔버스 엘리먼트를 적용해 본 것은 처음이었어..',
+    desc: '캔버스 엘리먼트를 처음 적용해 본 프로젝트.',
     Component: Fujifilm2020
   },
   { 
     id: 'laneige-2019',
     path: '/laneige-2019',
     name: '라네즈',
-    title: '라네즈 다국어',
+    title: '라네즈 다국어 웹사이트',
     thumbnail: '/image/laneige/cover-lg.png',
     publish: '프로젝트',
-    desc: '3개국 언어 베리에이션(variation)을 구축한 글로벌 뷰티 웹사이트. 특히 중국은 어렵다.',
+    desc: '3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트.',
     Component: Laneige2019
   },
 ]

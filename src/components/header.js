@@ -4,7 +4,7 @@ import * as palette from '../variables'
 const Header = styled.div`
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
-  max-width: ${palette.MAX_L}
+  max-width: ${palette.MAX_L};
   margin: 0 auto;
 `
 
