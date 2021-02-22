@@ -6,6 +6,9 @@ const Alink = styled.a`
   top: 8%;
   right: 5%;
   z-index: 10;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #fe5733;
 `
 
 function PostCloseButton() {

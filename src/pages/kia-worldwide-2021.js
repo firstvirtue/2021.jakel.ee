@@ -72,13 +72,14 @@ this.y = center + this.r * Math.sin(this.theta);
           </figure>
 
           <p>
-            페이지 수는 적었는데 어째 들어간 디자인 요소들이나 모션이 많아 고생했던 프로젝트 였습니다. 
+            페이지 수는 적었는데 어째 들어간 디자인 요소들이나 모션도 많고 요구사항도 정신없이 들어와서 고생했던 프로젝트 였습니다.
           </p>
 
           <p>
-            영감을 주는 움직임(movement that inspires) 이라는 브랜드 슬로건이 작업을 하며 저에게도 영감을 주었습니다. 이직이라는 움직임을 준비하게 되었죠.<br />
-            농담입니다 :)
+            영감을 주는 움직임(movement that inspires) 이라는 브랜드 슬로건을 작업을 하며 저도 영감을 얻고 싶었습니다. 그래서 이직이라는 움직임을 준비하게 되었죠.
           </p>
+
+          <p>물론 농담입니다 :)</p>
 
           <figure data-size="max">
             <img src="/image/kia-worldwide/screenshot-03.png" alt=""/>

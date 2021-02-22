@@ -4,8 +4,31 @@ import styled from 'styled-components'
 import * as palette from '../variables'
 
 const NextWrap = styled.div`
-margin-bottom: 100px;
-cursor: pointer;
+  position: relative;
+  margin-bottom: 100px;
+  cursor: pointer;
+  // bottom: -20%;
+  top: 20%;
+
+  .tit-next {
+    position: absolute;
+    font-family: ${palette.FONT_EN};
+    font-size: 30px;
+    z-index: 1;
+    top: 5%;
+    left: 10%;
+    color: #ffffff;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: white;
+    }
+  }
 `
 
 function Next(props) {
@@ -40,8 +63,11 @@ function Next(props) {
 
   return(
     <>
-      <NextWrap className="preview next-preview" data-id={props.pageId} onClick={handleOnClick.bind(this)}>
-        {props.children}
+      <NextWrap onClick={handleOnClick.bind(this)} data-size="lg">
+        <span className="tit-next">Next</span>
+        <div className="preview next-preview" data-id={props.pageId}>
+          {props.children}
+        </div>
       </NextWrap>
     </>
   )
