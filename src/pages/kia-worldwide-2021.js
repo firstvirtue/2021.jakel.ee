@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
 import Footer from './../components/footer'
-import { Post, Box } from './../components/post'
+import { Post, PostBody } from './../components/post'
 import Summary from '../components/summary'
 import Cover from './../components/cover'
 import Next from './../components/next'
@@ -19,26 +19,78 @@ function KiaWorldwide2021() {
       <Post>
         <Cover title="기아 KIA" imgSrc="/image/kia-worldwide/cover-lg.jpg" />
 
-        <Summary slogan="Movement that inspires" specs={specs}>
-          <h3>브랜드 리런칭</h3>
+        <PostBody>
+          <Summary slogan="Movement that inspires" specs={specs}>
+            <h2>브랜드 리론칭</h2>
+            <p>
+              기아자동차는 2021년을 맞이하여 기아로 사명을 바꾸며 CI와 BI의 변경을 비롯하여 브랜드의 대대적인 리론칭을 시작했습니다.<br />
+              이를 구체화하는 단계에서 동적으로 콘텐츠를 보여주는 쇼케이스 웹사이트가 요구사항으로 나오게 되었습니다.
+            </p>
+          </Summary>
+          
+          <figure data-size="lg">
+            <video src="/image/kia-worldwide/cover.mp4" autoPlay muted loop playsInline></video>
+            <figcaption>파티클 모션은 이벤트 시간이 지나가는 찰나의 시간에만 볼 수 있는 비운의 인터랙션이었다..</figcaption>
+          </figure>
+          
+          <h3 className="center">파티클 시뮬레이션</h3>
+
           <p>
-            기아자동차는 2021년을 맞이하여 기아로 사명을 바꾸며 CI와 BI의 변경을 비롯하여 브랜드의 대대적인 리런칭을 시작했습니다.<br />
-            이를 구체화하는 단계에서 동적으로 콘텐츠를 보여주는 쇼케이스 웹사이트가 요구사항으로 나오게 되었습니다.
+            쇼케이스 이벤트 시간까지 카운트다운이 진행되다 시간이 되면 원형 오브젝트가 터지는 파티클 모션을 보여줍니다. 원형 오브젝트가 파티클로 사라지는 모션은 기존 기아 로고를 둘러싸고 있던 원형 오브젝트가 사라지며 새 로고가 만들어지는 것을 의미했습니다.
           </p>
-        </Summary>
 
-        
-        <figure data-size="lg">
-          <video src="/image/kia-worldwide/count.mp4" autoPlay muted loop playsInline></video>
-        </figure>
-        
-        
-        
-        <Footer />
+          <p>
+            파티클 인터랙션은 canvas 엘리먼트로 구현되어 있습니다. 구형 디바이스에서도 쾌적하게 모션이 되도록 테스트를 거쳐 2000개의 파티클 갯수를 정했는데, 시간이 되면 정해진 범위 내에서 랜덤하게 생성 후 간단한 물리 연산을 통해 퍼지며 사라집니다.
+          </p>
 
-        <Next pageId="fujifilm-2020">
-          <Cover imgSrc="/image/fujifilm/cover-lg.jpg" title="후지필름" />
-        </Next>
+          {/* <p>
+<pre>{`// 댐핑에 의한 감속
+this.acc -= 0.02 * this.acc * this.mass;
+// 등가속도 회전
+this.theta += 0.0212 * this.acc * this.mass;
+// 등가속도 중심으로부터 멀어지는 움직임
+this.r += 2.3 * this.acc * this.mass;
+this.x = center + this.r * Math.cos(this.theta);
+this.y = center + this.r * Math.sin(this.theta);
+`}</pre>
+          </p> */}
+
+          <p>
+            렌더링 루프 안에서 파티클 각각은 등가속도 회전 운동을 위한 가속도와 질량을 가집니다. 이 갱신된 값을 토대로 cos, sin 함수를 이용해 파티클은 조금씩 움직이게 되죠. 여기에 감속을 위한 댐핑 상수를 가속도에 더해주면 그럴듯한 파티클 움직임이 나옵니다.
+          </p>
+
+          <figure data-size="lg">
+            <video src="/image/kia-worldwide/video-01.mp4" autoPlay muted loop playsInline></video>
+          </figure>
+
+          <figure data-size="lg">
+            <img src="/image/kia-worldwide/screenshot-01.png" alt=""/>
+          </figure>
+
+          <figure data-size="lg">
+            <img src="/image/kia-worldwide/screenshot-02.png" alt=""/>
+          </figure>
+
+          <p>
+            페이지 수는 적었는데 어째 들어간 디자인 요소들이나 모션이 많아 고생했던 프로젝트 였습니다. 
+          </p>
+
+          <p>
+            영감을 주는 움직임(movement that inspires) 이라는 브랜드 슬로건이 작업을 하며 저에게도 영감을 주었습니다. 이직이라는 움직임을 준비하게 되었죠.<br />
+            농담입니다 :)
+          </p>
+
+          <figure data-size="max">
+            <img src="/image/kia-worldwide/screenshot-03.png" alt=""/>
+          </figure>
+          
+          <Footer />
+
+          <Next pageId="fujifilm-2020">
+            <Cover imgSrc="/image/fujifilm/cover-lg.jpg" title="후지필름" />
+          </Next>
+
+        </PostBody>
       </Post>
     </>
   )

@@ -4,13 +4,26 @@ import * as palette from '../variables'
 const CoverWrap = styled.div`
   position: relative;
   height: 100vh;
-  max-height: 700px;
+  max-height: 720px;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
   .img-wrap {
+    position: absolute;
     width: 100%;
     height: 100%;
 
+    width: 100vw;
+    height: 100vh;
+    max-height: 720px;
+    max-width: 1920px;
+
     img {
       position: absolute;
+      position: relative;
       top: 0;
       bottom: 0;
       left: 0;
@@ -24,10 +37,18 @@ const CoverWrap = styled.div`
   .title {
     position: absolute;
     top: 30%;
-    left: 20px;
+    left: 10%;
+    // transform: translateX(-200%);
     color: #ffffff;
     font-size: 56px;
   }
+
+  // .wrapper {
+  //   max-width: ${palette.MAX_L};
+  //   width: 100%;
+  //   margin: 0 auto;
+  //   z-index: 1;
+  // }
 `
 
 function Cover(props) {
@@ -37,7 +58,9 @@ function Cover(props) {
       <div className="img-wrap">
         <img src={props.imgSrc} alt=""/>
       </div>
-      <h2 className="title">{props.title}</h2>
+      <div className="wrapper">
+        <h2 className="title">{props.title}</h2>
+      </div>
     </CoverWrap>
     </>
   )

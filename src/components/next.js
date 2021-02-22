@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import * as palette from '../variables'
 
 const NextWrap = styled.div`
-  cursor: pointer;
+margin-bottom: 100px;
+cursor: pointer;
 `
 
 function Next(props) {

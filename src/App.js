@@ -11,10 +11,10 @@ import routes from './routes'
 
 function App() {
   // let preview;
-  const DUR = 0.6
-  const EASE = 'back.out(0.5)'
+  const DUR = 0.8
+  const EASE = 'back.out(0.8)'
 
-  const routerEl = useRef(null);
+  const routerEl = useRef(null)
 
   const onAddEndHandler = (node, done) => {
     if(window.view === 1) {

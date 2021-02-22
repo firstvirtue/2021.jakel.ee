@@ -7,10 +7,10 @@ export default [
     id: 'kia-worldwide-2021',
     path: '/kia-worldwide-2021',
     name: '기아 KIA',
-    title: '기아 브랜드 쇼케이스',
+    title: '기아 브랜드 글로벌 리론칭',
     thumbnail: '/image/kia-worldwide/cover-lg.jpg',
     publish: '프로젝트',
-    desc: '기아의 환골탈태 브랜드 리런칭',
+    desc: '기아의 환골탈태 브랜드 리론칭',
     Component: KiaWorldwide2021
   },
   { 

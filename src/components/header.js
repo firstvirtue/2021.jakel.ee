@@ -19,6 +19,8 @@ const Ci = styled.h1`
 const Figure = styled.figure`
   margin: 0 5%;
   font-size: 22px;
+  word-break: keep-all;
+  word-wrap: break-word;
 
   figcaption {
     margin-top: 1em;

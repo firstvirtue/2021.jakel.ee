@@ -69,6 +69,7 @@
 .preview-container {
   max-width: 1280px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .preview-nav {
@@ -91,7 +92,7 @@
   text-decoration: none;
 
   & + & {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
   @media only screen and (min-width: 768px) {
@@ -110,7 +111,9 @@
   // position: absolute;
   // bottom: 0;
   position: relative;
-  left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
   width: 100%;
   color: black;
   background-color: #ffffff;

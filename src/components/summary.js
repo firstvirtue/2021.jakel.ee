@@ -3,9 +3,6 @@ import * as palette from '../variables'
 
 const Wrap = styled.div`
   padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 5%;
-  padding-right: 5%;
 `
 
 const Slogan = styled.div`
@@ -60,6 +57,13 @@ const Spec = styled.li`
 
 const Desc = styled.div`
   // font-size: 16px;
+  // font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+
+  h2 {
+    margin-top: 1rem;
+  }
 
   @media only screen and (min-width: 768px) {
     min-width: 500px;

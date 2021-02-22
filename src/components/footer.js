@@ -90,7 +90,7 @@ function footer() {
           <UL className="footer-items">
             <LI className="item head">
               <strong className="tit">이상오 Jake</strong>
-              <p>Front-end Developer</p>
+              <div>Front-end Developer</div>
             </LI>
             <LI className="item">
               <strong className="tit">Email</strong>
@@ -105,7 +105,7 @@ function footer() {
               <Link className="link" href="https://github.com/firstvirtue" target="_blank" rel="noopener noreferrer">Github</Link>
               <Link className="link" href="#">LinkedIn</Link>
               <Link className="link" href="https://instagram.com/sangolee" target="_blank" rel="noopener noreferrer">Instagram</Link>
-              <Link className="link" href="#">Facebook</Link>
+              {/* <Link className="link" href="#">Facebook</Link> */}
             </LI>
             <LI>
               <strong className="tit">지금 구직중이에요 <span>:D</span></strong>
