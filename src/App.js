@@ -53,8 +53,10 @@ function App() {
         if(!stylepos) return done()
 
         node.style.visibility = 'hidden';
+        
         const coverResource = new Image()
-        coverResource.src = node.querySelector('.cover img').getAttribute('src')
+        coverResource.src = node.querySelector('.cover .media').nodeName === 'IMG' ? node.querySelector('.cover .media').getAttribute('src') : node.querySelector('.cover .media').getAttribute('poster')
+
         coverResource.onload = () => {
           // window.scrollTo(0, 0)
           node.style.visibility = 'visible';
@@ -137,7 +139,7 @@ function App() {
               <a className="preview-link" onClick={handleOnClick.bind(this, route.path, route.id)} href={route.path}>
                 <div className="preview-wrap">
                   <div className="preview" data-id={route.id}>
-                    <Cover imgSrc={route.thumbnail} title={route.name} />
+                    <Cover imgSrc={route.thumbnail} videoSrc={route.video} title={route.name} />
                   </div>
                   <div className="preview-cont">
                     <strong className="publish">{route.publish}</strong>
@@ -156,7 +158,7 @@ function App() {
 
       {/* <TransitionGroup style={{opacity: 0.5}}> */}
       <TransitionGroup>
-      {routes.map(({ path, Component }) => (
+      {routes.map(({ path, name, thumbnail, video, Component }) => (
         <Route key={path} exact path={path}>
           {({ match }) => (
             
@@ -181,7 +183,7 @@ function App() {
             >
               <div className="page">
                 <PostCloseButton />
-                <Component />
+                <Component title={name} imgSrc={thumbnail} videoSrc={video}/>
               </div>
             </CSSTransition>
           

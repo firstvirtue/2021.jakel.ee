@@ -1,6 +1,7 @@
 import Fujifilm2020 from './pages/fujifilm-2020'
 import KiaWorldwide2021 from './pages/kia-worldwide-2021'
 import Laneige2019 from './pages/laneige-2019'
+import VyvydStudio2018 from './pages/vyvydstudio-2018'
 
 export default [
   { 
@@ -32,5 +33,16 @@ export default [
     publish: '프로젝트',
     desc: '3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트.',
     Component: Laneige2019
+  },
+  { 
+    id: 'vyvydstudio-2018',
+    path: '/vyvydstudio-2018',
+    name: 'VYVYD STUDIO',
+    title: '비비드 스튜디오',
+    thumbnail: '/image/laneige/cover-lg.png',
+    video: '/video/vyvydstudio/cover.mp4',
+    publish: '프로젝트',
+    desc: '밀레니얼 세대를 위한 코스메틱 브랜드.',
+    Component: VyvydStudio2018
   },
 ]

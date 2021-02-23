@@ -32,7 +32,7 @@ function KiaWorldwide2021() {
           </Summary>
           
           <figure data-size="lg">
-            <video src="/image/kia-worldwide/cover.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/kia-worldwide/cover.mp4" autoPlay muted loop playsInline></video>
             <figcaption>파티클 모션은 이벤트 시간이 지나가는 찰나의 시간에만 볼 수 있는 비운의 인터랙션이었다..</figcaption>
           </figure>
           
@@ -63,7 +63,7 @@ this.y = center + this.r * Math.sin(this.theta);
           </p>
 
           <figure data-size="lg">
-            <video src="/image/kia-worldwide/video-01.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/kia-worldwide/video-01.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
           <p className="standalone">

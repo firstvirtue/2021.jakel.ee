@@ -21,7 +21,8 @@ const CoverWrap = styled.div`
     max-height: 720px;
     max-width: 1920px;
 
-    img {
+    img,
+    video {
       position: absolute;
       position: relative;
       top: 0;
@@ -55,9 +56,14 @@ function Cover(props) {
   return (
     <>
     <CoverWrap className="cover">
+      {props.videoSrc ? 
       <div className="img-wrap">
-        <img src={props.imgSrc} alt=""/>
-      </div>
+        <video className="media" src={props.videoSrc} poster={props.imgSrc} autoPlay muted loop playsInline />
+      </div> :
+      <div className="img-wrap">
+        <img className="media" src={props.imgSrc} alt=""/>
+      </div>}
+
       <div className="wrapper">
         <h2 className="title">{props.title}</h2>
       </div>
