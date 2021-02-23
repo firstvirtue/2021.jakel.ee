@@ -21,11 +21,12 @@ function App() {
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
         if(!stylepos) return done()
-        // console.log('enter: ', stylepos)
         
         node.style.visibility = 'hidden';
+
         const coverResource = new Image()
-        coverResource.src = node.querySelector('.cover img').getAttribute('src')
+        coverResource.src = node.querySelector('.cover .media').nodeName === 'IMG' ? node.querySelector('.cover .media').getAttribute('src') : node.querySelector('.cover .media').getAttribute('poster')
+
         coverResource.onload = () => {
           node.style.visibility = 'visible';
           window.preview.style.visibility = 'hidden';

@@ -39,7 +39,7 @@ export default [
     path: '/vyvydstudio-2018',
     name: 'VYVYD STUDIO',
     title: '비비드 스튜디오',
-    thumbnail: '/image/laneige/cover-lg.png',
+    thumbnail: '/image/vyvydstudio/cover.png',
     video: '/video/vyvydstudio/cover.mp4',
     publish: '프로젝트',
     desc: '밀레니얼 세대를 위한 코스메틱 브랜드.',
