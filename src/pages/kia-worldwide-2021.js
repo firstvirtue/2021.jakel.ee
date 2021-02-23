@@ -26,6 +26,9 @@ function KiaWorldwide2021() {
               기아자동차는 2021년을 맞이하여 기아로 사명을 바꾸며 CI와 BI의 변경을 비롯하여 브랜드의 대대적인 리론칭을 시작했습니다.<br />
               이를 구체화하는 단계에서 동적으로 콘텐츠를 보여주는 쇼케이스 웹사이트가 요구사항으로 나오게 되었습니다.
             </p>
+            <p>
+            이벤트 D-day가 정해지고 해당 시간까지 카운팅을 보여준 뒤 시간이 되면 쇼케이스 콘텐츠를 볼 수 있는 페이지였습니다.
+          </p>
           </Summary>
           
           <figure data-size="lg">
@@ -36,7 +39,7 @@ function KiaWorldwide2021() {
           <h3 className="center">파티클 시뮬레이션</h3>
 
           <p>
-            쇼케이스 이벤트 시간까지 카운트다운이 진행되다 시간이 되면 원형 오브젝트가 터지는 파티클 모션을 보여줍니다. 원형 오브젝트가 파티클로 사라지는 모션은 기존 기아 로고를 둘러싸고 있던 원형 오브젝트가 사라지며 새 로고가 만들어지는 것을 의미했습니다.
+            쇼케이스 이벤트 시간까지 카운트다운이 되고 시간이 되면 원형 오브젝트가 터지는 파티클 모션을 보여줍니다. 원형 오브젝트가 파티클로 사라지는 모션은 기존 기아 로고를 둘러싸고 있던 원형 오브젝트가 사라지며 새 로고가 만들어지는 것을 의미했습니다.
           </p>
 
           <p>
@@ -63,6 +66,10 @@ this.y = center + this.r * Math.sin(this.theta);
             <video src="/image/kia-worldwide/video-01.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
+          <p className="standalone">
+            이 후에도 이벤트 스케줄에 따라 페이지들이 추가되며 기아의 브랜드 컨셉을 보여주는 웹사이트는 변화해 갔습니다. 앞선 페이지처럼 동적으로 변화하는 것은 아니지만요.
+          </p>
+
           <figure data-size="lg">
             <img src="/image/kia-worldwide/screenshot-01.png" alt=""/>
           </figure>
@@ -71,18 +78,18 @@ this.y = center + this.r * Math.sin(this.theta);
             <img src="/image/kia-worldwide/screenshot-02.png" alt=""/>
           </figure>
 
-          <p>
+          <p className="standalone">
             페이지 수는 적었는데 어째 들어간 디자인 요소들이나 모션도 많고 요구사항도 정신없이 들어와서 고생했던 프로젝트 였습니다.
           </p>
 
           <p>
-            영감을 주는 움직임(movement that inspires) 이라는 브랜드 슬로건을 작업을 하며 저도 영감을 얻고 싶었습니다. 그래서 이직이라는 움직임을 준비하게 되었죠.
+            영감을 주는 움직임(movement that inspires) 이라는 브랜드 슬로건을 작업을 하며 저도 영감을 얻고자 이직이라는 움직임을 준비하게 되었죠..
           </p>
 
-          <p>물론 농담입니다 :)</p>
+          <p>물론 농담이에요 :)</p>
 
           <figure data-size="max">
-            <img src="/image/kia-worldwide/screenshot-03.png" alt=""/>
+            <img src="/image/kia-worldwide/screenshot-03.jpg" alt=""/>
           </figure>
           
           <Footer />

@@ -72,6 +72,10 @@ const PostBodyWrap = styled.div`
     }
   }
 
+  .standalone {
+    margin-top: 6rem;
+  }
+
   @media only screen and (min-width: ${palette.MAX_POST}) {
 
     .summary {
@@ -90,6 +94,10 @@ const PostBodyWrap = styled.div`
     }
 
     figure {
+      margin-top: 10rem;
+    }
+
+    .standalone {
       margin-top: 10rem;
     }
   }
