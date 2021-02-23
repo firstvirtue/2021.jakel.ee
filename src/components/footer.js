@@ -66,8 +66,22 @@ const Link = styled.a`
   color: #1e1e1e;
   text-decoration: none;
   transition: color 400ms;
+
+  svg {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    transform: rotate(45deg);
+    transition: stroke 400ms;
+  }
+
   &:hover {
-    color: #fe5733;
+    color: #E06D72;
+
+    svg {
+      stroke: #E06D72;
+    }
   }
 
   & + & {
@@ -103,13 +117,16 @@ function footer() {
             <LI className="item">
               <strong className="tit">Social</strong>
               <Link className="link" href="https://github.com/firstvirtue" target="_blank" rel="noopener noreferrer">Github</Link>
-              <Link className="link" href="#">LinkedIn</Link>
+              <Link className="link" href="https://www.linkedin.com/in/firstvirtue/" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
               <Link className="link" href="https://instagram.com/sangolee" target="_blank" rel="noopener noreferrer">Instagram</Link>
               {/* <Link className="link" href="#">Facebook</Link> */}
             </LI>
             <LI>
               <strong className="tit">지금 구직중이에요 <span>:D</span></strong>
-              <Link href="#">이력서</Link>
+              <Link href="/resource/이상오 2021-02-22.pdf" target="_blank" rel="noopener noreferrer">
+                <span>이력서</span>
+                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </Link>
             </LI>
           </UL>
           {/* <Copyright>© 2021. Jake Lee.</Copyright> */}
