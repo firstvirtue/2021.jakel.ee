@@ -9,7 +9,7 @@ export default [
     path: '/kia-worldwide-2021',
     name: '기아 KIA',
     title: '기아 브랜드 글로벌 리론칭',
-    thumbnail: '/image/kia-worldwide/cover-lg.jpg',
+    thumbnail: '/image/kia-worldwide-2021/cover-lg.jpg',
     publish: '프로젝트',
     desc: '기아의 환골탈태 브랜드 리론칭',
     Component: KiaWorldwide2021
@@ -19,17 +19,17 @@ export default [
     path: '/fujifilm-2020',
     name: '후지필름',
     title: '후지필름',
-    thumbnail: '/image/fujifilm/cover-lg.jpg',
+    thumbnail: '/image/fujifilm-2020/cover-lg.jpg',
     publish: '프로젝트',
     desc: '캔버스 엘리먼트를 처음 적용해 본 프로젝트.',
     Component: Fujifilm2020
   },
-  { 
+  {
     id: 'laneige-2019',
     path: '/laneige-2019',
     name: '라네즈',
     title: '라네즈 다국어 웹사이트',
-    thumbnail: '/image/laneige/cover-lg.png',
+    thumbnail: '/image/laneige-2019/cover-lg.png',
     publish: '프로젝트',
     desc: '3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트.',
     Component: Laneige2019
@@ -39,8 +39,8 @@ export default [
     path: '/vyvydstudio-2018',
     name: 'VYVYD STUDIO',
     title: '비비드 스튜디오',
-    thumbnail: '/image/vyvydstudio/cover.png',
-    video: '/video/vyvydstudio/cover.mp4',
+    thumbnail: '/image/vyvydstudio-2018/cover.png',
+    video: '/video/vyvydstudio-2018/cover.mp4',
     publish: '프로젝트',
     desc: '밀레니얼 세대를 위한 코스메틱 브랜드.',
     Component: VyvydStudio2018

@@ -16,13 +16,13 @@ function Fujifilm2020() {
   return (
     <>
       <Post>
-        <Cover title="후지필름" imgSrc="/image/fujifilm/cover-lg.jpg" />
+        <Cover title="후지필름" imgSrc="/image/fujifilm-2020/cover-lg.jpg" />
 
         <PostBody>
           <Summary slogan="Value from Innovation" specs={specs}>
             <h2>브랜드 후지필름</h2>
             <p>
-              카메라 브랜드 후지필름의 웹사이트 리뉴얼은 29cm, 라이카와 같은 브랜드 고급화 전략으로 기획/디자인되었습니다. 좋아하는 컨셉이어서 화면 개발에 즐거웠던 기억이 나는군요.
+              카메라 브랜드 후지필름의 웹사이트 리뉴얼은 29cm, 라이카와 같은 브랜드 고급화 전략으로 기획/디자인되었습니다. 좋아하는 콘셉트이어서 화면 개발에 즐거웠던 기억이 나는군요.
             </p>
             <p>
               특히 회사 프로젝트에 canvas를 사용해 인터랙션을 처음 적용해 본 개인적으로 의미 있는 프로젝트였습니다.
@@ -30,7 +30,7 @@ function Fujifilm2020() {
           </Summary>
 
           <figure data-size="lg">
-            <video src="/video/fujifilm/video-01.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/fujifilm-2020/video-01.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
           <h3 className="center">파티클</h3>
@@ -43,21 +43,21 @@ function Fujifilm2020() {
           </p>
 
           <figure data-size="lg">
-            <video src="/video/fujifilm/video-02.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/fujifilm-2020/video-02.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
           <figure data-size="lg">
-            <img src="/image/fujifilm/shot-01.png" alt=""/>
+            <img src="/image/fujifilm-2020/shot-01.png" alt=""/>
           </figure>
 
           <figure data-size="lg">
-            <img src="/image/fujifilm/shot-02.png" alt=""/>
+            <img src="/image/fujifilm-2020/shot-02.png" alt=""/>
           </figure>
         
           <Footer />
 
           <Next pageId="laneige-2019">
-            <Cover imgSrc="/image/laneige/cover-lg.png" title="라네즈" />
+            <Cover imgSrc="/image/laneige-2019/cover-lg.png" title="라네즈" />
           </Next>
         </PostBody>
       </Post>

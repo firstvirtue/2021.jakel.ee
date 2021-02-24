@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react'
 import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
-import Footer from './../components/footer'
 import { Post, PostBody } from './../components/post'
-import Summary from '../components/summary'
 import Cover from './../components/cover'
+import Summary from '../components/summary'
+import Footer from './../components/footer'
 import Next from './../components/next'
 
 function KiaWorldwide2021() {
@@ -17,7 +17,7 @@ function KiaWorldwide2021() {
   return (
     <>
       <Post>
-        <Cover title="기아 KIA" imgSrc="/image/kia-worldwide/cover-lg.jpg" />
+        <Cover title="기아 KIA" imgSrc="/image/kia-worldwide-2021/cover-lg.jpg" />
 
         <PostBody>
           <Summary slogan="Movement that inspires" specs={specs}>
@@ -32,7 +32,7 @@ function KiaWorldwide2021() {
           </Summary>
           
           <figure data-size="lg">
-            <video src="/video/kia-worldwide/cover.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/kia-worldwide-2021/cover.mp4" autoPlay muted loop playsInline></video>
             <figcaption>파티클 모션은 이벤트 시간이 지나가는 찰나의 시간에만 볼 수 있는 비운의 인터랙션이었다..</figcaption>
           </figure>
           
@@ -63,7 +63,7 @@ this.y = center + this.r * Math.sin(this.theta);
           </p>
 
           <figure data-size="lg">
-            <video src="/video/kia-worldwide/video-01.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/kia-worldwide-2021/video-01.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
           <p className="standalone">
@@ -71,11 +71,11 @@ this.y = center + this.r * Math.sin(this.theta);
           </p>
 
           <figure data-size="lg">
-            <img src="/image/kia-worldwide/screenshot-01.png" alt=""/>
+            <img src="/image/kia-worldwide-2021/screenshot-01.png" alt=""/>
           </figure>
 
           <figure data-size="lg">
-            <img src="/image/kia-worldwide/screenshot-02.png" alt=""/>
+            <img src="/image/kia-worldwide-2021/screenshot-02.png" alt=""/>
           </figure>
 
           <p className="standalone">
@@ -89,13 +89,13 @@ this.y = center + this.r * Math.sin(this.theta);
           <p>물론 농담이에요 :)</p>
 
           <figure data-size="max">
-            <img src="/image/kia-worldwide/screenshot-03.jpg" alt=""/>
+            <img src="/image/kia-worldwide-2021/screenshot-03.jpg" alt=""/>
           </figure>
           
           <Footer />
 
           <Next pageId="fujifilm-2020">
-            <Cover imgSrc="/image/fujifilm/cover-lg.jpg" title="후지필름" />
+            <Cover imgSrc="/image/fujifilm-2020/cover-lg.jpg" title="후지필름" />
           </Next>
 
         </PostBody>

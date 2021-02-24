@@ -2,11 +2,11 @@ import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
 
 function ImageLoader(callback) {
   const images = [
-    loadImage('/image/kia-worldwide/cover-lg.jpg'),
-    loadImage('/image/fujifilm/cover-lg.jpg'),
-    loadImage('/image/laneige/cover-lg.png'),
-    loadImage('/image/vyvydstudio/cover.png'),
-    loadImage('/image/vyvydstudio/shot-02.png'),
+    loadImage('/image/kia-worldwide-2021/cover-lg.jpg'),
+    loadImage('/image/fujifilm-2020/cover-lg.jpg'),
+    loadImage('/image/laneige-2019/cover-lg.png'),
+    loadImage('/image/vyvydstudio-2018/cover.png'),
+    loadImage('/image/vyvydstudio-2018/shot-02.png'),
   ]
 
   let count = 0

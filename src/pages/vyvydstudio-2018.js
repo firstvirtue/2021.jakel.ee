@@ -6,7 +6,7 @@ function VyvydStudio2018(props) {
   return (
     <>
       <div className="post">
-        <Cover title={props.title} videoSrc="/video/vyvydstudio/cover.mp4" imgSrc="/image/vyvydstudio/cover.png" />
+        <Cover title={props.title} videoSrc="/video/vyvydstudio-2018/cover.mp4" imgSrc="/image/vyvydstudio-2018/cover.png" />
 
         <Footer />
       </div>
