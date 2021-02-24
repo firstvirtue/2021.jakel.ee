@@ -67,8 +67,8 @@ function Laneige2019() {
 
           <Footer />
 
-          <Next pageId="vyvydstudio-2018">
-            <Cover imgSrc="/image/vyvydstudio-2018/cover.png" videoSrc="/video/vyvydstudio-2018/cover.mp4" title="VYVYD STUDIO" />
+          <Next pageId="galleria-2019">
+            <Cover imgSrc="/image/galleria-2019/main.png" videoSrc="/video/galleria-2019/main.mp4" title="Hanwha Galleria" />
           </Next>
 
         </PostBody>

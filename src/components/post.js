@@ -72,6 +72,10 @@ const PostBodyWrap = styled.div`
     }
   }
 
+  em {
+    color: #66a80f;
+  }
+
   .standalone {
     margin-top: 6rem;
   }

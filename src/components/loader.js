@@ -5,6 +5,7 @@ function ImageLoader(callback) {
     loadImage('/image/kia-worldwide-2021/cover-lg.jpg'),
     loadImage('/image/fujifilm-2020/cover-lg.jpg'),
     loadImage('/image/laneige-2019/cover-lg.png'),
+    loadImage('/image/galleria-2019/main.png'),
     loadImage('/image/vyvydstudio-2018/cover.png'),
     loadImage('/image/vyvydstudio-2018/shot-02.png'),
   ]
