@@ -9,7 +9,7 @@ import Next from './../components/next'
 function KiaWorldwide2021() {
   const specs = [
     { tit: '클라이언트', cont: '기아' },
-    { tit: '기술', cont: 'webpack gulp canvas' },
+    { tit: '기술', cont: 'webpack gulp es6 canvas' },
     { tit: '언어', cont: 'Ko En' },
     { tit: '프로젝트 보기', cont: 'https://worldwide.kia.com' },
   ]
