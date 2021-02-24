@@ -17,7 +17,7 @@ function ImageLoader(callback) {
       let image = new Image()
   
       image.onload = () => {
-        callback(++count / images.length * 100)
+        callback(Math.floor(++count / images.length * 100))
         resolve(image)
       }
       image.onerror = () => reject(new Error(`Could not load image at ${url}`))
