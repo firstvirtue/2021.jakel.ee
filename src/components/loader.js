@@ -39,12 +39,14 @@ function Loader() {
   useLayoutEffect(() => {
     if(firstUpdate.current) {
       firstUpdate.current = false
+      document.body.style.overflow = 'hidden'
       ImageLoader(count => {
         // console.log(count)
         setStatus(count)
         if(count === 100) {
           setTimeout(() => {
             setVisibility(false)
+            document.body.style = ''
           }, 500)
         }
       })
