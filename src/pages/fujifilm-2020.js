@@ -56,7 +56,7 @@ function Fujifilm2020() {
         
           <Footer />
 
-          <Next pageId="laneige-2019">
+          <Next pageId="laneige-2019" shade="light">
             <Cover imgSrc="/image/laneige-2019/cover-lg.png" title="라네즈" />
           </Next>
         </PostBody>

@@ -31,7 +31,7 @@ function Laneige2019() {
             <video src="/video/galleria-2019/history.mp4" poster="/image/galleria-2019/history.png" autoPlay muted loop playsInline></video>
           </figure>
 
-          <h3 className="center">Rxjs & Pjax</h3>
+          <h3 className="center">Rxjs &amp; Pjax</h3>
           <p>
             인터랙션을 강화하기 위한 방법으로 비동기 라이브러리인 Rxjs와 페이지 전환을 위한 Pjax가 사용되었습니다.<br />
             비동기 라이브러리인 Rxjs를 이용해 스크롤을 내릴 때 위치 값을 쌓아두고 보간하여 스크롤에 따라 부드럽게 따라오는 선을 만들 수 있었습니다. Pjax는 관련 라이브러리인 Barba.js 를 사용했는데 페이지간 이동이 부드럽게 연결되도록하여 웹이 아닌 앱처럼 사용성을 강화하고자 했습니다.
@@ -75,7 +75,7 @@ function Laneige2019() {
 
           <Footer />
 
-          <Next pageId="vyvydstudio-2018">
+          <Next pageId="vyvydstudio-2018" shade="light">
             <Cover imgSrc="/image/vyvydstudio-2018/cover.png" videoSrc="/video/vyvydstudio-2018/cover.mp4" title="VYVYD STUDIO" />
           </Next>
 

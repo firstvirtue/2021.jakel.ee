@@ -26,7 +26,17 @@ const NextWrap = styled.div`
       bottom: 0;
       width: 100%;
       height: 1px;
-      background: white;
+      background: #ffffff;
+    }
+  }
+
+  &.light {
+    .tit-next {
+      color: #000000;
+
+      &::before {
+        background: #000000;
+      }
     }
   }
 `
@@ -61,9 +71,11 @@ function Next(props) {
     e.stopPropagation()
   })
 
+  // props.shade ? '#000000' : '#ffffff'
+
   return(
     <>
-      <NextWrap onClick={handleOnClick.bind(this)} data-size="lg">
+      <NextWrap onClick={handleOnClick.bind(this)} data-size="lg" className={props.shade ? props.shade : null}>
         <span className="tit-next">Next</span>
         <div className="preview next-preview" data-id={props.pageId}>
           {props.children}

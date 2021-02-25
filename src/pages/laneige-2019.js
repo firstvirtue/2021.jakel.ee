@@ -44,7 +44,7 @@ function Laneige2019() {
 
           <figure data-size="lg">
             <video src="/video/laneige-2019/brand-story.mp4" poster="/image/laneige-2019/brand-story.png" autoPlay muted loop playsInline></video>
-            <figcaption>만들면서도 '몇 명이나 이 페이지를 끝까지 볼까..' 했던 복잡도 최상의 페이지 브랜드 스토리</figcaption>
+            <figcaption>만들면서도 &lsquo;몇 명이나 이 페이지를 끝까지 볼까..&rsquo; 했던 복잡도 최상의 페이지 브랜드 스토리</figcaption>
           </figure>
 
           <h3>다국어</h3>

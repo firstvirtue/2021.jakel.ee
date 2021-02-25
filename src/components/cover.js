@@ -37,11 +37,18 @@ const CoverWrap = styled.div`
 
   .title {
     position: absolute;
-    top: 30%;
+    top: 17%;
     left: 10%;
     // transform: translateX(-200%);
     color: #ffffff;
-    font-size: 56px;
+    font-size: 34px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .title {
+      top: 30%;
+      font-size: 56px;
+    }
   }
 
   // .wrapper {
