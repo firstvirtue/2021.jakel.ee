@@ -49,6 +49,13 @@ const PostBodyWrap = styled.div`
     margin-top: 2em;
   }
 
+  p a {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #686868;
+  }
+
   pre {
     color: #686868;
     font-size: 14px;
