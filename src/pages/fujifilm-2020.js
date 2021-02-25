@@ -30,7 +30,7 @@ function Fujifilm2020() {
           </Summary>
 
           <figure data-size="lg">
-            <video src="/video/fujifilm-2020/video-01.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/fujifilm-2020/video-01.mp4" poster="/image/fujifilm-2020/video-01.png" autoPlay muted loop playsInline></video>
           </figure>
 
           <h3 className="center">파티클</h3>
@@ -43,7 +43,7 @@ function Fujifilm2020() {
           </p>
 
           <figure data-size="lg">
-            <video src="/video/fujifilm-2020/video-02.mp4" autoPlay muted loop playsInline></video>
+            <video src="/video/fujifilm-2020/video-02.mp4" poster="/image/fujifilm-2020/video-02.png" autoPlay muted loop playsInline></video>
           </figure>
 
           <figure data-size="lg">
