@@ -17,7 +17,7 @@ function KiaWorldwide2021() {
   return (
     <>
       <Post>
-        <Cover title="기아 KIA" imgSrc="/image/kia-worldwide-2021/cover-lg.jpg" />
+        <Cover title="기아 KIA" imgSrc="/image/kia-worldwide-2021/cover-lg.jpg" shade="dark"/>
 
         <PostBody>
           <Summary slogan="Movement that inspires" specs={specs}>
@@ -62,7 +62,7 @@ this.y = center + this.r * Math.sin(this.theta);
             렌더링 루프 안에서 파티클 각각은 등가속도 회전 운동을 위한 가속도와 질량을 가집니다. 이 갱신된 값을 토대로 cos, sin 함수를 이용해 파티클은 조금씩 움직이게 되죠. 여기에 감속을 위한 댐핑 상수를 가속도에 더해주면 그럴듯한 파티클 움직임이 나옵니다.
           </p>
 
-          <figure data-size="lg">
+          <figure data-size="lg" data-shade="dark">
             <video src="/video/kia-worldwide-2021/video-01.mp4" autoPlay muted loop playsInline></video>
           </figure>
 
@@ -70,11 +70,11 @@ this.y = center + this.r * Math.sin(this.theta);
             이후에도 이벤트 스케줄에 따라 페이지들이 추가되며 기아의 브랜드 콘셉트를 보여주는 웹사이트는 변화해 갔습니다. 앞선 페이지처럼 동적으로 변화하는 것은 아니지만요.
           </p>
 
-          <figure data-size="lg">
+          <figure data-size="lg" data-shade="dark">
             <img src="/image/kia-worldwide-2021/screenshot-01.png" alt=""/>
           </figure>
 
-          <figure data-size="lg">
+          <figure data-size="lg" data-shade="dark">
             <img src="/image/kia-worldwide-2021/screenshot-02.png" alt=""/>
           </figure>
 
@@ -88,7 +88,7 @@ this.y = center + this.r * Math.sin(this.theta);
 
           <p>물론 농담입니다 ㅎㅎ :)</p>
 
-          <figure data-size="max">
+          <figure data-size="max" data-shade="dark">
             <img src="/image/kia-worldwide-2021/screenshot-03.jpg" alt=""/>
           </figure>
           

@@ -55,7 +55,7 @@ const CoverWrap = styled.div`
 function Cover(props) {
   return (
     <>
-    <CoverWrap className="cover">
+    <CoverWrap className="cover" data-shade={props.shade ? props.shade : 'light'}>
       {props.videoSrc ? 
       <div className="img-wrap">
         <video className="media" src={props.videoSrc} poster={props.imgSrc} autoPlay muted loop playsInline />

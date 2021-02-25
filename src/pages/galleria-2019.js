@@ -45,7 +45,7 @@ function Laneige2019() {
             <video src="/video/galleria-2019/vision.mp4" poster="/image/galleria-2019/vision.png" autoPlay muted loop playsInline></video>
           </figure>
 
-          <p>
+          <p className="standalone">
             PL을 맡아서인지 담당 디자이너 분과 요렇게 하면 어떨까요 저렇게 하면 어떨까요 하면서 즐겁게 커뮤니케이션하며 작업했던 기억이 납니다. 결과물도 만족스럽게 나온 것 같습니다.
           </p>
 

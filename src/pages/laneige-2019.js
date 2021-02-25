@@ -16,7 +16,7 @@ function Laneige2019() {
   return (
     <>
       <Post>
-        <Cover title="라네즈" imgSrc="/image/laneige-2019/cover-lg.png" />
+        <Cover title="라네즈" imgSrc="/image/laneige-2019/cover-lg.png"/>
 
         <PostBody>
           <Summary slogan="Luminous Beauty" specs={specs}>

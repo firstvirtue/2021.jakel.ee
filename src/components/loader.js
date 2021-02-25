@@ -27,7 +27,7 @@ function ImageLoader(callback) {
 
   Promise.all(images)
   .then(res => {
-    console.log('load', res)
+    // console.log('load', res)
   })
   .catch(err => console.log(err))
 }

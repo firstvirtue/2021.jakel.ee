@@ -16,7 +16,7 @@ function Fujifilm2020() {
   return (
     <>
       <Post>
-        <Cover title="후지필름" imgSrc="/image/fujifilm-2020/cover-lg.jpg" />
+        <Cover title="후지필름" imgSrc="/image/fujifilm-2020/cover-lg.jpg" shade="dark"/>
 
         <PostBody>
           <Summary slogan="Value from Innovation" specs={specs}>
