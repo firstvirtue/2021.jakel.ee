@@ -20,17 +20,10 @@
 
 .page-enter {
   position: relative;
-  // position: absolute;
-  /* opacity: 0; */
-  // transform: scale(1.02);
-  // z-index: 10;
 }
 
 .page-enter-active {
   position: relative;
-  // opacity: 1;
-  // transform: scale(1);
-  /* transition: opacity 300ms, transform 300ms; */
 }
 
 .page-enter-done {
@@ -39,17 +32,10 @@
 
 .page-exit {
   position: relative;
-  // position: absolute;
-  // opacity: 1;
-  // transform: scale(1);
-  // z-index: 10 - 1;
 }
 
 .page-exit-active {
   position: relative;
-  /* opacity: 0; */
-  // transform: scale(0.98);
-  // transition: opacity 300ms, transform 300ms;
 }
 
 .page-exit-done {
@@ -61,6 +47,25 @@
   overflow: hidden !important;
   max-height: 100vh !important;
   pointer-events: none;
+}
+
+.veil {
+
+}
+
+.veil-enter {
+  opacity: 0;
+}
+.veil-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.veil-exit {
+  opacity: 1;
+}
+.veil-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
 
 //////////////////////////////////////

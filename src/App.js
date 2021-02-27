@@ -1,6 +1,6 @@
 import './App.scss'
 import { useRef, useCallback } from 'react';
-import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
+import { BrowserRouter as Router, Route, useHistory, Link } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Footer from './components/footer'
 import Header from './components/header'
@@ -8,6 +8,7 @@ import Cover from './components/cover'
 import PostCloseButton from './components/post-close-button'
 import gsap from 'gsap'
 import routes from './routes'
+import About from './pages/about'
 
 function App() {
   // let preview;
@@ -132,6 +133,8 @@ function App() {
       <div className="router" ref={routerEl}>
         <Header />
 
+        <Link to="/about">About</Link>
+
         {/* <h2 className="title">모든 프로젝트</h2> */}
         <div className="preview-container">
           <div className="preview-nav">
@@ -187,10 +190,32 @@ function App() {
                 <Component title={name} imgSrc={thumbnail} videoSrc={video}/>
               </div>
             </CSSTransition>
-          
+
           )}
         </Route>
       ))}
+
+      <Route key="/about" exact path="/about">
+        {({ match }) => (
+          <CSSTransition
+          in={match != null}
+          timeout={DUR * 1000}
+          classNames="veil"
+          unmountOnExit
+          onEnter = {node => {
+            console.log('Enter: ', node)
+            if(routerEl.current.style.position !== 'fixed') {
+              routerEl.current.style.top = -window.pageYOffset + 'px'
+              routerEl.current.style.position = 'fixed'
+            }
+          }}
+        >
+          <div className="veil">
+            <About />
+          </div>
+        </CSSTransition>
+        )}
+      </Route>
       </TransitionGroup>
     </>
   );
