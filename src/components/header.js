@@ -36,6 +36,12 @@ const Blockquote = styled.blockquote`
   opacity: 0.7;
 `
 
+const MobileBr = styled.br`
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`
+
 function Intro() {
   return (
     <>
@@ -44,9 +50,9 @@ function Intro() {
       </Header>
       <Figure>
         <Blockquote>
-          난 내 예술로 사람들을 어루만지고 싶다.<br /> 
-          그들이 이렇게 말하길 바란다. <br />
-          그는 마음이 깊은 사람이구나, 마음이 따뜻한 사람이구나.
+          난 내 예술로 사람들을<MobileBr/> 어루만지고 싶다.<br/> 
+          그들이 이렇게 말하길 바란다. <br/>
+          그는 마음이 깊은 사람이구나,<MobileBr/> 마음이 따뜻한 사람이구나.
           <figcaption>— 빈센트 반 고흐, <cite>러빙 빈센트</cite></figcaption>
         </Blockquote>
       </Figure>
