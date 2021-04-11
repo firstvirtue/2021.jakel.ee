@@ -3,6 +3,7 @@ import KiaWorldwide2021 from './pages/kia-worldwide-2021'
 import Laneige2019 from './pages/laneige-2019'
 import Galleria2019 from './pages/galleria-2019'
 import VyvydStudio2018 from './pages/vyvydstudio-2018'
+import Board from './pages/board'
 
 export default [
   { 
@@ -57,4 +58,11 @@ export default [
     desc: '밀레니얼 인싸들을 위한 코스메틱 브랜드.',
     Component: VyvydStudio2018
   },
+  // {
+  //   id: 'post',
+  //   path: '/post',
+  //   name: '샘플',
+  //   title: '셈플',
+  //   Component: Board,
+  // }
 ]

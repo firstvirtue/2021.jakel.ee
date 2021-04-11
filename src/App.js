@@ -1,6 +1,6 @@
 import './App.scss'
 import { useRef, useCallback } from 'react';
-import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, useHistory } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Footer from './components/footer'
 import Header from './components/header'
@@ -17,6 +17,7 @@ function App() {
   const routerEl = useRef(null)
 
   const onAddEndHandler = (node, done) => {
+    console.log('node:: ', node);
     if(window.view === 1) {
       if(node.classList.contains('page-enter')) {
         const stylepos = getPreviewStyleAndPosition()
@@ -132,6 +133,15 @@ function App() {
       <div className="router" ref={routerEl}>
         <Header />
 
+        {/* 
+        [TODO] node 타입에 따른 뷰 트랜지션 애니메이션
+        
+        [TODO] 트랜지션 메서드 정리
+        [TODO] 컴포넌트 네이밍 변경 Board > Post, Post > Template 
+        [TODO] route에 페이지 등록
+        */}
+        {/* <Link to="/post">Post</Link> */}
+
         {/* <h2 className="title">모든 프로젝트</h2> */}
         <div className="preview-container">
           <div className="preview-nav">
@@ -170,12 +180,14 @@ function App() {
               unmountOnExit
               onEnter = {node => {
                 // console.log('Enter: ', node)
+                console.log('node:: ', node);
                 if(routerEl.current.style.position !== 'fixed') {
                   routerEl.current.style.top = -window.pageYOffset + 'px'
                   routerEl.current.style.position = 'fixed'
                 }
               }}
               onExit = {node => {
+                console.log('node:: ', node);
                 // console.log('Exit: ', node)
                 node.classList.add('page-scroll-block')
                 node.style.top = -window.pageYOffset + 'px'
