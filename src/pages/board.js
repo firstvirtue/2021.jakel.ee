@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 
 function Board() {
   return (
-    <div className="post">qwe</div>
+    <div className="post">이것은 무엇인가?</div>
   )
 }
 
